@@ -32,14 +32,28 @@ class Settings(BaseSettings):
         "http://127.0.0.1:4300",
     ]
 
-    # OpenAI configuration
-    openai_api_key: str | None = None
-    # Use a commonly available model by default
-    openai_model: str = "gpt-4o-mini"
+    # LLM provider: "gemini" or "openai"
+    llm_provider: str = "gemini"
 
-    # Example macro-style values (customize as needed)
-    # api_timeout_seconds: int = 30
-    # some_macro_flag: bool = False
+    # OpenAI (GPT-4 — paid)
+    openai_api_key: str | None = None
+    openai_model: str = "gpt-4o-mini"
+    openai_embedding_model: str = "text-embedding-3-small"
+    openai_embedding_dim: int = 1536
+
+    # Google Gemini (free tier)
+    gemini_api_key: str | None = None
+    gemini_model: str = "models/gemini-2.5-flash"
+    gemini_embedding_model: str = "models/gemini-embedding-001"
+    gemini_embedding_dim: int = 3072
+
+    # PostgreSQL
+    db_host: str = "localhost"
+    db_port: int = 5432
+    db_user: str = "postgres"
+    db_password: str = "myWizard@123"
+    db_name: str = "rqp_chat"
+    db_schema: str = "rqp"
 
     class Config:
         # We already load .env explicitly above, but keep this for clarity.

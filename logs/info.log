@@ -1,0 +1,319 @@
+2026-05-16 08:39:29 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:39:30 | INFO     | main | Database initialised successfully
+2026-05-16 08:39:34 | INFO     | main | Application shutting down
+2026-05-16 08:39:45 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:39:45 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 08:39:45 | INFO     | db | Using embedding dimension: 768 (provider=gemini)
+2026-05-16 08:39:45 | INFO     | db | DB initialisation complete
+2026-05-16 08:39:45 | INFO     | main | Database initialised successfully
+2026-05-16 08:39:46 | INFO     | main | Application shutting down
+2026-05-16 08:39:55 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:39:55 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 08:39:55 | INFO     | db | Using embedding dimension: 768 (provider=gemini)
+2026-05-16 08:39:55 | INFO     | db | DB initialisation complete
+2026-05-16 08:39:55 | INFO     | main | Database initialised successfully
+2026-05-16 08:40:14 | INFO     | main | Application shutting down
+2026-05-16 08:40:21 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:40:21 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 08:40:21 | INFO     | db | Using embedding dimension: 768 (provider=gemini)
+2026-05-16 08:40:21 | INFO     | db | DB initialisation complete
+2026-05-16 08:40:21 | INFO     | main | Database initialised successfully
+2026-05-16 08:41:02 | INFO     | main | REQUEST  POST /documents/upload
+2026-05-16 08:41:02 | INFO     | routes | Upload request — filename='Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' content_type=application/pdf
+2026-05-16 08:41:02 | INFO     | routes | File read — size=89999 bytes
+2026-05-16 08:41:02 | INFO     | routes | Extracting text from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' (type=pdf, size=89999 bytes)
+2026-05-16 08:41:03 | INFO     | routes | Extracted 3018 characters from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 08:41:03 | INFO     | routes | Text split into 7 chunks (size=500, overlap=50)
+2026-05-16 08:41:03 | INFO     | routes | Generating embeddings for 7 chunks
+2026-05-16 08:41:03 | INFO     | llm | Embedding 7 text(s) using provider=gemini
+2026-05-16 08:42:31 | INFO     | main | Application shutting down
+2026-05-16 08:42:42 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:42:42 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 08:42:42 | INFO     | db | Using embedding dimension: 768 (provider=gemini)
+2026-05-16 08:42:42 | INFO     | db | DB initialisation complete
+2026-05-16 08:42:42 | INFO     | main | Database initialised successfully
+2026-05-16 08:45:40 | INFO     | main | Application shutting down
+2026-05-16 08:45:51 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:45:51 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 08:45:51 | INFO     | db | Using embedding dimension: 768 (provider=gemini)
+2026-05-16 08:45:51 | INFO     | db | DB initialisation complete
+2026-05-16 08:45:51 | INFO     | main | Database initialised successfully
+2026-05-16 08:45:52 | INFO     | main | REQUEST  POST /documents/upload
+2026-05-16 08:45:52 | INFO     | routes | Upload request — filename='Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' content_type=application/pdf
+2026-05-16 08:45:52 | INFO     | routes | File read — size=89999 bytes
+2026-05-16 08:45:52 | INFO     | routes | Extracting text from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' (type=pdf, size=89999 bytes)
+2026-05-16 08:45:53 | INFO     | routes | Extracted 3018 characters from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 08:45:53 | INFO     | routes | Text split into 7 chunks (size=500, overlap=50)
+2026-05-16 08:45:53 | INFO     | routes | Generating embeddings for 7 chunks
+2026-05-16 08:45:53 | INFO     | llm | Embedding 7 text(s) using provider=gemini
+2026-05-16 08:46:12 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:batchEmbedContents "HTTP/1.1 400 Bad Request"
+2026-05-16 08:47:49 | INFO     | main | Application shutting down
+2026-05-16 08:48:04 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:48:04 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 08:48:04 | INFO     | db | Using embedding dimension: 768 (provider=gemini)
+2026-05-16 08:48:04 | INFO     | db | DB initialisation complete
+2026-05-16 08:48:04 | INFO     | main | Database initialised successfully
+2026-05-16 08:48:04 | INFO     | main | REQUEST  POST /documents/upload
+2026-05-16 08:48:04 | INFO     | routes | Upload request — filename='Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' content_type=application/pdf
+2026-05-16 08:48:04 | INFO     | routes | File read — size=89999 bytes
+2026-05-16 08:48:04 | INFO     | routes | Extracting text from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' (type=pdf, size=89999 bytes)
+2026-05-16 08:48:08 | INFO     | routes | Extracted 3018 characters from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 08:48:08 | INFO     | routes | Text split into 7 chunks (size=500, overlap=50)
+2026-05-16 08:48:08 | INFO     | routes | Generating embeddings for 7 chunks
+2026-05-16 08:48:08 | INFO     | llm | Embedding 7 text(s) using provider=gemini
+2026-05-16 08:48:32 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:batchEmbedContents "HTTP/1.1 400 Bad Request"
+2026-05-16 08:50:18 | INFO     | main | Application shutting down
+2026-05-16 08:50:26 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:50:26 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 08:50:26 | INFO     | db | Using embedding dimension: 768 (provider=gemini)
+2026-05-16 08:50:26 | INFO     | db | DB initialisation complete
+2026-05-16 08:50:26 | INFO     | main | Database initialised successfully
+2026-05-16 08:50:36 | INFO     | main | REQUEST  POST /documents/upload
+2026-05-16 08:50:36 | INFO     | routes | Upload request — filename='Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' content_type=application/pdf
+2026-05-16 08:50:36 | INFO     | routes | File read — size=89999 bytes
+2026-05-16 08:50:36 | INFO     | routes | Extracting text from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' (type=pdf, size=89999 bytes)
+2026-05-16 08:50:37 | INFO     | routes | Extracted 3018 characters from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 08:50:37 | INFO     | routes | Text split into 7 chunks (size=500, overlap=50)
+2026-05-16 08:50:37 | INFO     | routes | Generating embeddings for 7 chunks
+2026-05-16 08:50:37 | INFO     | llm | Embedding 7 text(s) using provider=gemini
+2026-05-16 08:51:03 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:batchEmbedContents "HTTP/1.1 404 Not Found"
+2026-05-16 08:51:37 | INFO     | main | Application shutting down
+2026-05-16 08:51:46 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:51:46 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 08:51:46 | INFO     | db | Using embedding dimension: 768 (provider=gemini)
+2026-05-16 08:51:46 | INFO     | db | DB initialisation complete
+2026-05-16 08:51:46 | INFO     | main | Database initialised successfully
+2026-05-16 08:52:07 | INFO     | main | REQUEST  POST /documents/upload
+2026-05-16 08:52:07 | INFO     | routes | Upload request — filename='Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' content_type=application/pdf
+2026-05-16 08:52:07 | INFO     | routes | File read — size=89999 bytes
+2026-05-16 08:52:07 | INFO     | routes | Extracting text from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' (type=pdf, size=89999 bytes)
+2026-05-16 08:52:11 | INFO     | routes | Extracted 3018 characters from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 08:52:11 | INFO     | routes | Text split into 7 chunks (size=500, overlap=50)
+2026-05-16 08:52:11 | INFO     | routes | Generating embeddings for 7 chunks
+2026-05-16 08:52:11 | INFO     | llm | Embedding 7 text(s) using provider=gemini
+2026-05-16 08:52:39 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:batchEmbedContents "HTTP/1.1 404 Not Found"
+2026-05-16 08:52:58 | INFO     | main | REQUEST  POST /documents/upload
+2026-05-16 08:52:58 | INFO     | routes | Upload request — filename='Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' content_type=application/pdf
+2026-05-16 08:52:58 | INFO     | routes | File read — size=89999 bytes
+2026-05-16 08:52:58 | INFO     | routes | Extracting text from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' (type=pdf, size=89999 bytes)
+2026-05-16 08:52:59 | INFO     | routes | Extracted 3018 characters from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 08:52:59 | INFO     | routes | Text split into 7 chunks (size=500, overlap=50)
+2026-05-16 08:52:59 | INFO     | routes | Generating embeddings for 7 chunks
+2026-05-16 08:52:59 | INFO     | llm | Embedding 7 text(s) using provider=gemini
+2026-05-16 08:53:01 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:batchEmbedContents "HTTP/1.1 404 Not Found"
+2026-05-16 08:53:41 | INFO     | main | Application shutting down
+2026-05-16 08:53:50 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 08:53:50 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 08:53:50 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-05-16 08:53:50 | INFO     | db | DB initialisation complete
+2026-05-16 08:53:50 | INFO     | main | Database initialised successfully
+2026-05-16 08:54:27 | INFO     | main | REQUEST  POST /documents/upload
+2026-05-16 08:54:27 | INFO     | routes | Upload request — filename='Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' content_type=application/pdf
+2026-05-16 08:54:27 | INFO     | routes | File read — size=89999 bytes
+2026-05-16 08:54:27 | INFO     | routes | Extracting text from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' (type=pdf, size=89999 bytes)
+2026-05-16 08:54:28 | INFO     | routes | Extracted 3018 characters from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 08:54:28 | INFO     | routes | Text split into 7 chunks (size=500, overlap=50)
+2026-05-16 08:54:28 | INFO     | routes | Generating embeddings for 7 chunks
+2026-05-16 08:54:28 | INFO     | llm | Embedding 7 text(s) using provider=gemini
+2026-05-16 08:54:48 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 08:54:49 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 08:54:50 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 08:54:50 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 08:54:51 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 08:54:51 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 08:54:52 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 08:54:52 | INFO     | llm | Embedding complete — 7 vector(s) returned
+2026-05-16 08:54:52 | INFO     | db | Inserting 7 chunks for file 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 08:59:58 | INFO     | main | Application shutting down
+2026-05-16 09:00:05 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 09:00:05 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 09:00:05 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-05-16 09:00:05 | INFO     | db | DB initialisation complete
+2026-05-16 09:00:05 | INFO     | main | Database initialised successfully
+2026-05-16 09:00:27 | INFO     | main | REQUEST  POST /documents/upload
+2026-05-16 09:00:27 | INFO     | routes | Upload request — filename='Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' content_type=application/pdf
+2026-05-16 09:00:27 | INFO     | routes | File read — size=89999 bytes
+2026-05-16 09:00:27 | INFO     | routes | Extracting text from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' (type=pdf, size=89999 bytes)
+2026-05-16 09:00:27 | INFO     | routes | Extracted 3018 characters from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 09:00:27 | INFO     | routes | Text split into 7 chunks (size=500, overlap=50)
+2026-05-16 09:00:27 | INFO     | routes | Generating embeddings for 7 chunks
+2026-05-16 09:00:27 | INFO     | llm | Embedding 7 text(s) using provider=gemini
+2026-05-16 09:00:49 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:00:50 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:00:50 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:00:51 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:00:51 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:00:52 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:00:53 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:00:53 | INFO     | llm | Embedding complete — 7 vector(s) returned
+2026-05-16 09:00:53 | INFO     | db | Inserting 7 chunks for file 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 09:01:22 | INFO     | main | Application shutting down
+2026-05-16 09:01:32 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 09:01:32 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 09:01:32 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-05-16 09:01:32 | INFO     | db | DB initialisation complete
+2026-05-16 09:01:32 | INFO     | main | Database initialised successfully
+2026-05-16 09:01:41 | INFO     | main | REQUEST  POST /documents/upload
+2026-05-16 09:01:41 | INFO     | routes | Upload request — filename='Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' content_type=application/pdf
+2026-05-16 09:01:41 | INFO     | routes | File read — size=89999 bytes
+2026-05-16 09:01:41 | INFO     | routes | Extracting text from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' (type=pdf, size=89999 bytes)
+2026-05-16 09:01:42 | INFO     | routes | Extracted 3018 characters from 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 09:01:42 | INFO     | routes | Text split into 7 chunks (size=500, overlap=50)
+2026-05-16 09:01:42 | INFO     | routes | Generating embeddings for 7 chunks
+2026-05-16 09:01:42 | INFO     | llm | Embedding 7 text(s) using provider=gemini
+2026-05-16 09:01:57 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:01:58 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:01:58 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:01:59 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:01:59 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:02:00 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:02:00 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:02:00 | INFO     | llm | Embedding complete — 7 vector(s) returned
+2026-05-16 09:02:00 | INFO     | db | Inserting 7 chunks for file 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 09:02:00 | INFO     | db | Successfully inserted 7 chunks for 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf'
+2026-05-16 09:02:00 | INFO     | routes | Upload complete — 'Resume_f7061308-0947-42e7-bfa9-79500f201788.pdf' stored 7 chunks
+2026-05-16 09:02:00 | INFO     | main | RESPONSE POST /documents/upload → 200 (18992.2ms)
+2026-05-16 09:03:24 | INFO     | main | REQUEST  POST /documents/query
+2026-05-16 09:03:24 | INFO     | routes | Query request — question_len=26 top_k=5
+2026-05-16 09:03:24 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-05-16 09:03:30 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:03:30 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-05-16 09:03:30 | INFO     | db | Running similarity search — top_k=5
+2026-05-16 09:03:30 | INFO     | db | Similarity search returned 5 results
+2026-05-16 09:03:30 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-05-16 09:03:30 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2663
+2026-05-16 09:03:34 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-05-16 09:03:35 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-05-16 09:05:09 | INFO     | main | Application shutting down
+2026-05-16 09:05:17 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 09:05:17 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 09:05:17 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-05-16 09:05:17 | INFO     | db | DB initialisation complete
+2026-05-16 09:05:17 | INFO     | main | Database initialised successfully
+2026-05-16 09:05:28 | INFO     | main | REQUEST  POST /documents/query
+2026-05-16 09:05:28 | INFO     | routes | Query request — question_len=26 top_k=5
+2026-05-16 09:05:28 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-05-16 09:05:37 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:05:37 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-05-16 09:05:37 | INFO     | db | Running similarity search — top_k=5
+2026-05-16 09:05:37 | INFO     | db | Similarity search returned 5 results
+2026-05-16 09:05:37 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-05-16 09:05:37 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2663
+2026-05-16 09:05:39 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-05-16 09:05:39 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-16 09:07:12 | INFO     | main | Application shutting down
+2026-05-16 09:07:21 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-16 09:07:21 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-16 09:07:21 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-05-16 09:07:21 | INFO     | db | DB initialisation complete
+2026-05-16 09:07:21 | INFO     | main | Database initialised successfully
+2026-05-16 09:08:25 | INFO     | main | REQUEST  POST /documents/query
+2026-05-16 09:08:25 | INFO     | routes | Query request — question_len=26 top_k=5
+2026-05-16 09:08:25 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-05-16 09:08:43 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:08:43 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-05-16 09:08:43 | INFO     | db | Running similarity search — top_k=5
+2026-05-16 09:08:43 | INFO     | db | Similarity search returned 5 results
+2026-05-16 09:08:43 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-05-16 09:08:43 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2663
+2026-05-16 09:08:44 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-05-16 09:08:47 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-16 09:08:47 | INFO     | llm | Chat response received — reply_len=78
+2026-05-16 09:08:47 | INFO     | routes | Query answered successfully — answer_len=78
+2026-05-16 09:08:47 | INFO     | main | RESPONSE POST /documents/query → 200 (22259.2ms)
+2026-05-16 09:10:14 | INFO     | main | REQUEST  POST /documents/query
+2026-05-16 09:10:14 | INFO     | routes | Query request — question_len=21 top_k=5
+2026-05-16 09:10:14 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-05-16 09:10:21 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:10:21 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-05-16 09:10:21 | INFO     | db | Running similarity search — top_k=5
+2026-05-16 09:10:22 | INFO     | db | Similarity search returned 5 results
+2026-05-16 09:10:22 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-05-16 09:10:22 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2658
+2026-05-16 09:10:27 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-05-16 09:10:29 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-16 09:10:29 | INFO     | llm | Chat response received — reply_len=109
+2026-05-16 09:10:29 | INFO     | routes | Query answered successfully — answer_len=109
+2026-05-16 09:10:29 | INFO     | main | RESPONSE POST /documents/query → 200 (14937.7ms)
+2026-05-16 09:11:46 | INFO     | main | REQUEST  POST /documents/query
+2026-05-16 09:11:46 | INFO     | routes | Query request — question_len=21 top_k=5
+2026-05-16 09:11:46 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-05-16 09:11:53 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:11:53 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-05-16 09:11:53 | INFO     | db | Running similarity search — top_k=5
+2026-05-16 09:11:53 | INFO     | db | Similarity search returned 5 results
+2026-05-16 09:11:53 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-05-16 09:11:53 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2658
+2026-05-16 09:11:58 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-05-16 09:12:02 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-16 09:12:02 | INFO     | llm | Chat response received — reply_len=375
+2026-05-16 09:12:02 | INFO     | routes | Query answered successfully — answer_len=375
+2026-05-16 09:12:02 | INFO     | main | RESPONSE POST /documents/query → 200 (15589.1ms)
+2026-05-16 09:49:12 | INFO     | main | REQUEST  POST /documents/query
+2026-05-16 09:49:12 | INFO     | routes | Query request — question_len=35 top_k=5
+2026-05-16 09:49:12 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-05-16 09:49:20 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:49:20 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-05-16 09:49:20 | INFO     | db | Running similarity search — top_k=5
+2026-05-16 09:49:20 | INFO     | db | Similarity search returned 5 results
+2026-05-16 09:49:20 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-05-16 09:49:20 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2854
+2026-05-16 09:49:25 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-05-16 09:49:31 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-16 09:49:31 | INFO     | llm | Chat response received — reply_len=1963
+2026-05-16 09:49:31 | INFO     | routes | Query answered successfully — answer_len=1963
+2026-05-16 09:49:31 | INFO     | main | RESPONSE POST /documents/query → 200 (18770.1ms)
+2026-05-16 09:50:21 | INFO     | main | REQUEST  POST /documents/query
+2026-05-16 09:50:21 | INFO     | routes | Query request — question_len=48 top_k=5
+2026-05-16 09:50:21 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-05-16 09:50:26 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-16 09:50:26 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-05-16 09:50:26 | INFO     | db | Running similarity search — top_k=5
+2026-05-16 09:50:26 | INFO     | db | Similarity search returned 5 results
+2026-05-16 09:50:26 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-05-16 09:50:26 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2867
+2026-05-16 09:50:31 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-05-16 09:50:37 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-16 09:50:37 | INFO     | llm | Chat response received — reply_len=325
+2026-05-16 09:50:37 | INFO     | routes | Query answered successfully — answer_len=325
+2026-05-16 09:50:37 | INFO     | main | RESPONSE POST /documents/query → 200 (16117.1ms)
+2026-05-18 10:50:25 | INFO     | main | REQUEST  GET /docs
+2026-05-18 10:50:25 | INFO     | main | RESPONSE GET /docs → 200 (75.4ms)
+2026-05-18 11:03:25 | INFO     | main | REQUEST  GET /docs
+2026-05-18 11:03:25 | INFO     | main | RESPONSE GET /docs → 200 (3.3ms)
+2026-05-18 11:03:27 | INFO     | main | REQUEST  GET /openapi.json
+2026-05-18 11:03:27 | INFO     | main | RESPONSE GET /openapi.json → 200 (151.5ms)
+2026-05-18 12:15:59 | INFO     | main | Application shutting down
+2026-05-18 12:16:36 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-18 12:16:36 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-18 12:16:37 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-05-18 12:16:37 | INFO     | db | DB initialisation complete
+2026-05-18 12:16:37 | INFO     | main | Database initialised successfully
+2026-05-20 15:55:43 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-20 15:55:43 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-20 15:55:44 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-05-20 15:55:44 | INFO     | db | DB initialisation complete
+2026-05-20 15:55:44 | INFO     | main | Database initialised successfully
+2026-05-20 16:01:37 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-05-20 16:01:37 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-05-20 16:01:37 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-05-20 16:01:37 | INFO     | db | DB initialisation complete
+2026-05-20 16:01:37 | INFO     | main | Database initialised successfully
+2026-05-20 16:06:58 | INFO     | main | REQUEST  GET /docs
+2026-05-20 16:06:58 | INFO     | main | RESPONSE GET /docs → 200 (10.9ms)
+2026-05-20 16:07:06 | INFO     | main | REQUEST  GET /openapi.json
+2026-05-20 16:07:06 | INFO     | main | RESPONSE GET /openapi.json → 200 (84.1ms)
+2026-05-20 17:34:05 | INFO     | main | REQUEST  POST /documents/query
+2026-05-20 17:34:05 | INFO     | routes | Query request — question_len=28 top_k=5
+2026-05-20 17:34:05 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-05-20 17:34:30 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-05-20 17:34:30 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-05-20 17:34:30 | INFO     | db | Running similarity search — top_k=5
+2026-05-20 17:34:30 | INFO     | db | Similarity search returned 5 results
+2026-05-20 17:34:30 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-05-20 17:34:30 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2665
+2026-05-20 17:34:35 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-05-20 17:34:39 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-20 17:34:39 | INFO     | llm | Chat response received — reply_len=431
+2026-05-20 17:34:39 | INFO     | routes | Query answered successfully — answer_len=431
+2026-05-20 17:34:39 | INFO     | main | RESPONSE POST /documents/query → 200 (33815.7ms)
