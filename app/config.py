@@ -30,6 +30,8 @@ class Settings(BaseSettings):
         "http://127.0.0.1:4200",
         "http://127.0.0.1:4210",
         "http://127.0.0.1:4300",
+        "http://202.21.47.139:9999",
+        "http://202.21.47.139:4200"
     ]
 
     # LLM provider: "gemini" or "openai"

@@ -1202,3 +1202,347 @@ Traceback (most recent call last):
     cur.execute("CREATE EXTENSION IF NOT EXISTS vector SCHEMA public;")
 psycopg2.errors.InvalidParameterValue: extension "vector" has no installation script nor update path for version "0.8.2"
 
+2026-08-23 10:31:06 | ERROR    | main | UNHANDLED EXCEPTION POST /documents/upload — No /Root object! - Is this really a PDF?
+Traceback (most recent call last):
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\pdfplumber\pdf.py", line 50, in __init__
+    self.doc = PDFDocument(PDFParser(stream), password=password or "")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\pdfminer\pdfdocument.py", line 744, in __init__
+    raise PDFSyntaxError("No /Root object! - Is this really a PDF?")
+pdfminer.pdfparser.PDFSyntaxError: No /Root object! - Is this really a PDF?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\main.py", line 35, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\api\routes.py", line 145, in upload_file
+    text = _extract_text(file.filename, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\api\routes.py", line 30, in _extract_text
+    with pdfplumber.open(io.BytesIO(data)) as pdf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\pdfplumber\pdf.py", line 107, in open
+    return cls(
+           ^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\pdfplumber\pdf.py", line 52, in __init__
+    raise PdfminerException(e)
+pdfplumber.utils.exceptions.PdfminerException: No /Root object! - Is this really a PDF?
+2026-08-23 10:59:57 | ERROR    | llm | Chat failed (provider=gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\llm.py", line 75, in chat
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\models.py", line 6604, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\models.py", line 5028, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1708, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1495, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1472, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-08-23 10:59:57 | ERROR    | main | UNHANDLED EXCEPTION POST /documents/query — 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\main.py", line 35, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\api\routes.py", line 183, in query_documents
+    answer = chat(
+             ^^^^^
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\llm.py", line 75, in chat
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\models.py", line 6604, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\models.py", line 5028, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1708, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1495, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1472, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-08-23 11:00:10 | ERROR    | llm | Chat failed (provider=gemini): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\llm.py", line 75, in chat
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\models.py", line 6604, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\models.py", line 5028, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1708, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1495, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1472, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-08-23 11:00:10 | ERROR    | main | UNHANDLED EXCEPTION POST /documents/query — 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Traceback (most recent call last):
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\main.py", line 35, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\fastapi\routing.py", line 352, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\api\routes.py", line 183, in query_documents
+    answer = chat(
+             ^^^^^
+  File "C:\All_Developers\vs19\ZunoUI\rqp-phython\app\llm.py", line 75, in chat
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\models.py", line 6604, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\models.py", line 5028, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1708, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1495, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\_api_client.py", line 1472, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "c:\All_Developers\vs19\ZunoUI\rqp-phython\AgentEnv\Lib\site-packages\google\genai\errors.py", line 186, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
