@@ -203,3 +203,4 @@ def similarity_search(query_embedding: list[float], top_k: int = 5) -> list[dict
     except Exception as exc:
         log.error("Similarity search failed: %s", exc, exc_info=True)
         raise
+

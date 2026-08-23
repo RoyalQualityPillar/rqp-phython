@@ -317,633 +317,238 @@
 2026-05-20 17:34:39 | INFO     | llm | Chat response received — reply_len=431
 2026-05-20 17:34:39 | INFO     | routes | Query answered successfully — answer_len=431
 2026-05-20 17:34:39 | INFO     | main | RESPONSE POST /documents/query → 200 (33815.7ms)
-2026-08-07 11:17:59 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
-2026-08-07 11:17:59 | INFO     | db | Initialising DB — host=localhost db=rqp_pg schema=rqp
-2026-08-07 11:17:59 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
-2026-08-07 11:55:50 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
-2026-08-07 11:55:50 | INFO     | db | Initialising DB — host=localhost db=rqp_pg schema=rqp
-2026-08-07 11:55:50 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
-2026-08-07 12:05:09 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
-2026-08-07 12:05:09 | INFO     | db | Initialising DB — host=localhost db=rqp_pg schema=rqp
-2026-08-07 12:05:09 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
-2026-08-07 12:05:09 | INFO     | db | pgvector extension available — using native vector similarity
-2026-08-07 12:05:09 | INFO     | db | DB initialisation complete
-2026-08-07 12:05:09 | INFO     | main | Database initialised successfully
-2026-08-07 12:05:21 | INFO     | main | REQUEST  GET /docs
-2026-08-07 12:05:21 | INFO     | main | RESPONSE GET /docs → 200 (3.0ms)
-2026-08-07 12:05:22 | INFO     | main | REQUEST  GET /openapi.json
-2026-08-07 12:05:22 | INFO     | main | RESPONSE GET /openapi.json → 200 (62.8ms)
-2026-08-07 12:05:53 | INFO     | main | REQUEST  POST /documents/upload
-2026-08-07 12:05:53 | INFO     | routes | Upload request — filename='org.html.pdf' content_type=application/pdf
-2026-08-07 12:05:53 | INFO     | routes | File read — size=4913 bytes
-2026-08-07 12:05:53 | INFO     | routes | Extracting text from 'org.html.pdf' (type=pdf, size=4913 bytes)
-2026-08-07 12:05:53 | INFO     | routes | Extracted 364 characters from 'org.html.pdf'
-2026-08-07 12:05:53 | INFO     | routes | Text split into 1 chunks (size=500, overlap=50)
-2026-08-07 12:05:53 | INFO     | routes | Generating embeddings for 1 chunks
-2026-08-07 12:05:53 | INFO     | llm | Embedding 1 text(s) using provider=gemini
-2026-08-07 12:06:11 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
-2026-08-07 12:06:11 | INFO     | llm | Embedding complete — 1 vector(s) returned
-2026-08-07 12:06:11 | INFO     | db | Inserting 1 chunks for file 'org.html.pdf'
-2026-08-07 12:06:11 | INFO     | db | Successfully inserted 1 chunks for 'org.html.pdf'
-2026-08-07 12:06:11 | INFO     | routes | Upload complete — 'org.html.pdf' stored 1 chunks
-2026-08-07 12:06:11 | INFO     | main | RESPONSE POST /documents/upload → 200 (18231.0ms)
-2026-08-07 12:20:56 | INFO     | main | REQUEST  GET /
-2026-08-07 15:02:04 | INFO     | main | REQUEST  GET /dispatch.asp
-2026-08-07 15:04:00 | INFO     | main | REQUEST  GET /
-2026-08-07 18:52:53 | INFO     | main | REQUEST  GET /
-2026-08-07 19:04:05 | INFO     | main | REQUEST  GET /
-2026-08-07 19:04:05 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-08 01:25:54 | INFO     | main | REQUEST  GET /dispatch.asp
-2026-08-08 04:22:39 | INFO     | main | REQUEST  GET /
-2026-08-08 04:22:40 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-08 04:22:40 | INFO     | main | REQUEST  GET /
-2026-08-08 04:22:40 | INFO     | main | REQUEST  GET /mcp/
-2026-08-08 04:22:40 | INFO     | main | REQUEST  GET /api/mcp
-2026-08-08 04:22:41 | INFO     | main | REQUEST  GET /mcp
-2026-08-08 04:22:41 | INFO     | main | REQUEST  GET /sse
-2026-08-08 06:48:25 | INFO     | main | REQUEST  GET /
-2026-08-08 07:17:49 | INFO     | main | REQUEST  GET /
-2026-08-08 07:22:52 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-08 07:45:35 | INFO     | main | REQUEST  GET /
-2026-08-08 07:45:36 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-08 10:49:06 | INFO     | main | REQUEST  GET /
-2026-08-08 10:49:06 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-08 10:49:06 | INFO     | main | REQUEST  GET /
-2026-08-08 10:49:06 | INFO     | main | REQUEST  GET /mcp
-2026-08-08 10:49:16 | INFO     | main | REQUEST  GET /sse
-2026-08-08 10:51:42 | INFO     | main | REQUEST  GET /dispatch.asp
-2026-08-08 11:45:39 | INFO     | main | REQUEST  GET /metrics
-2026-08-08 11:46:19 | INFO     | main | REQUEST  GET /metrics
-2026-08-08 14:59:08 | INFO     | main | REQUEST  GET /
-2026-08-08 14:59:42 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-08 15:00:02 | INFO     | main | REQUEST  GET /
-2026-08-08 15:24:23 | INFO     | main | REQUEST  GET /.env
-2026-08-08 15:24:23 | INFO     | main | REQUEST  GET /.env.local
-2026-08-08 15:24:24 | INFO     | main | REQUEST  GET /.env.production
-2026-08-08 15:24:24 | INFO     | main | REQUEST  GET /.env.development
-2026-08-08 15:24:25 | INFO     | main | REQUEST  GET /.env.dev
-2026-08-08 15:24:25 | INFO     | main | REQUEST  GET /.env.staging
-2026-08-08 15:24:25 | INFO     | main | REQUEST  GET /.env.test
-2026-08-08 15:24:26 | INFO     | main | REQUEST  GET /.env.example
-2026-08-08 15:24:26 | INFO     | main | REQUEST  GET /.env.backup
-2026-08-08 15:24:27 | INFO     | main | REQUEST  GET /.envrc
-2026-08-08 15:24:27 | INFO     | main | REQUEST  GET /.aws/config
-2026-08-08 15:24:27 | INFO     | main | REQUEST  GET /.aws/credentials
-2026-08-08 15:24:28 | INFO     | main | REQUEST  GET /config.json
-2026-08-08 15:24:28 | INFO     | main | REQUEST  GET /config.js
-2026-08-08 15:24:29 | INFO     | main | REQUEST  GET /config.yaml
-2026-08-08 15:24:29 | INFO     | main | REQUEST  GET /config.yml
-2026-08-08 15:24:29 | INFO     | main | REQUEST  GET /config.xml
-2026-08-08 15:24:30 | INFO     | main | REQUEST  GET /config.ini
-2026-08-08 15:24:30 | INFO     | main | REQUEST  GET /configuration.json
-2026-08-08 15:24:31 | INFO     | main | REQUEST  GET /configuration.yaml
-2026-08-08 15:24:31 | INFO     | main | REQUEST  GET /configuration.xml
-2026-08-08 15:24:31 | INFO     | main | REQUEST  GET /settings.json
-2026-08-08 15:24:32 | INFO     | main | REQUEST  GET /settings.py
-2026-08-08 15:24:32 | INFO     | main | REQUEST  GET /settings.php
-2026-08-08 15:24:32 | INFO     | main | REQUEST  GET /settings.ini
-2026-08-08 15:24:33 | INFO     | main | REQUEST  GET /application.properties
-2026-08-08 15:24:33 | INFO     | main | REQUEST  GET /application.yml
-2026-08-08 15:24:34 | INFO     | main | REQUEST  GET /application.yaml
-2026-08-08 15:24:34 | INFO     | main | REQUEST  GET /secrets.yml
-2026-08-08 15:24:34 | INFO     | main | REQUEST  GET /secrets.yaml
-2026-08-08 15:24:35 | INFO     | main | REQUEST  GET /secrets.json
-2026-08-08 15:24:35 | INFO     | main | REQUEST  GET /credentials.json
-2026-08-08 15:24:36 | INFO     | main | REQUEST  GET /credentials.xml
-2026-08-08 15:24:36 | INFO     | main | REQUEST  GET /credentials.ini
-2026-08-08 15:24:36 | INFO     | main | REQUEST  GET /database.yml
-2026-08-08 15:24:37 | INFO     | main | REQUEST  GET /database.yaml
-2026-08-08 15:24:37 | INFO     | main | REQUEST  GET /database.json
-2026-08-08 15:24:38 | INFO     | main | REQUEST  GET /database.config
-2026-08-08 15:24:38 | INFO     | main | REQUEST  GET /app.config
-2026-08-08 15:24:38 | INFO     | main | REQUEST  GET /web.config
-2026-08-08 15:24:39 | INFO     | main | REQUEST  GET /.env~
-2026-08-08 15:24:39 | INFO     | main | REQUEST  GET /.env.bak
-2026-08-08 15:24:40 | INFO     | main | REQUEST  GET /.env.old
-2026-08-08 15:24:40 | INFO     | main | REQUEST  GET /.env.save
-2026-08-08 15:24:40 | INFO     | main | REQUEST  GET /.env.orig
-2026-08-08 15:24:41 | INFO     | main | REQUEST  GET /.env.dist
-2026-08-08 15:24:41 | INFO     | main | REQUEST  GET /config.php~
-2026-08-08 15:24:41 | INFO     | main | REQUEST  GET /config.php.bak
-2026-08-08 15:24:42 | INFO     | main | REQUEST  GET /config.php.old
-2026-08-08 15:24:42 | INFO     | main | REQUEST  GET /config.php.save
-2026-08-08 15:24:43 | INFO     | main | REQUEST  GET /config.php.orig
-2026-08-08 15:24:43 | INFO     | main | REQUEST  GET /config.php.swp
-2026-08-08 15:24:43 | INFO     | main | REQUEST  GET /config.php.swo
-2026-08-08 15:24:44 | INFO     | main | REQUEST  GET /.git/
-2026-08-08 15:24:44 | INFO     | main | REQUEST  GET /.git/config
-2026-08-08 15:24:45 | INFO     | main | REQUEST  GET /.git/HEAD
-2026-08-08 15:24:45 | INFO     | main | REQUEST  GET /.git/index
-2026-08-08 15:24:46 | INFO     | main | REQUEST  GET /.git/logs/HEAD
-2026-08-08 15:24:46 | INFO     | main | REQUEST  GET /.svn/
-2026-08-08 15:24:46 | INFO     | main | REQUEST  GET /.svn/entries
-2026-08-08 15:24:47 | INFO     | main | REQUEST  GET /.svn/wc.db
-2026-08-08 15:24:47 | INFO     | main | REQUEST  GET /.hg/
-2026-08-08 15:24:48 | INFO     | main | REQUEST  GET /.hg/store/data/
-2026-08-08 15:24:48 | INFO     | main | REQUEST  GET /.bzr/
-2026-08-08 15:24:48 | INFO     | main | REQUEST  GET /CVS/
-2026-08-08 15:24:49 | INFO     | main | REQUEST  GET /.gitignore
-2026-08-08 15:24:49 | INFO     | main | REQUEST  GET /.gitattributes
-2026-08-08 15:24:49 | INFO     | main | REQUEST  GET /.gitlab-ci.yml
-2026-08-08 15:24:50 | INFO     | main | REQUEST  GET /.github/
-2026-08-08 15:24:50 | INFO     | main | REQUEST  GET /error.log
-2026-08-08 15:24:51 | INFO     | main | REQUEST  GET /access.log
-2026-08-08 15:24:51 | INFO     | main | REQUEST  GET /debug.log
-2026-08-08 15:24:51 | INFO     | main | REQUEST  GET /laravel.log
-2026-08-08 15:24:52 | INFO     | main | REQUEST  GET /app.log
-2026-08-08 15:24:52 | INFO     | main | REQUEST  GET /storage/logs/laravel.log
-2026-08-08 15:24:53 | INFO     | main | REQUEST  GET /php_error.log
-2026-08-08 15:24:53 | INFO     | main | REQUEST  GET /php_errors.log
-2026-08-08 15:24:53 | INFO     | main | REQUEST  GET /logs/
-2026-08-08 15:24:54 | INFO     | main | REQUEST  GET /log/
-2026-08-08 15:24:54 | INFO     | main | REQUEST  GET /tmp/
-2026-08-08 15:24:55 | INFO     | main | REQUEST  GET /temp/
-2026-08-08 15:24:55 | INFO     | main | REQUEST  GET //admin
-2026-08-08 15:24:55 | INFO     | main | REQUEST  GET //administrator
-2026-08-08 15:24:56 | INFO     | main | REQUEST  GET //adminpanel
-2026-08-08 15:24:56 | INFO     | main | REQUEST  GET //admin/login
-2026-08-08 15:24:56 | INFO     | main | REQUEST  GET //admin.php
-2026-08-08 15:24:57 | INFO     | main | REQUEST  GET //api/
-2026-08-08 15:24:57 | INFO     | main | REQUEST  GET //api/v1/
-2026-08-08 15:24:58 | INFO     | main | REQUEST  GET //api/v2/
-2026-08-08 15:24:58 | INFO     | main | REQUEST  GET //api/docs
-2026-08-08 15:24:58 | INFO     | main | REQUEST  GET //swagger
-2026-08-08 15:24:59 | INFO     | main | REQUEST  GET //swagger-ui.html
-2026-08-08 15:24:59 | INFO     | main | REQUEST  GET //openapi.json
-2026-08-08 15:25:00 | INFO     | main | REQUEST  GET //graphql
-2026-08-08 15:25:00 | INFO     | main | REQUEST  GET //graphiql
-2026-08-08 15:25:00 | INFO     | main | REQUEST  GET //actuator
-2026-08-08 15:25:01 | INFO     | main | REQUEST  GET //actuator/env
-2026-08-08 15:25:01 | INFO     | main | REQUEST  GET //actuator/configprops
-2026-08-08 15:25:02 | INFO     | main | REQUEST  GET //actuator/heapdump
-2026-08-08 15:25:02 | INFO     | main | REQUEST  GET //phpinfo.php
-2026-08-08 15:25:02 | INFO     | main | REQUEST  GET //info.php
-2026-08-08 15:25:03 | INFO     | main | REQUEST  GET //phpmyadmin
-2026-08-08 15:25:03 | INFO     | main | REQUEST  GET //pma
-2026-08-08 15:25:03 | INFO     | main | REQUEST  GET //debug
-2026-08-08 15:25:04 | INFO     | main | REQUEST  GET //console
-2026-08-08 15:25:04 | INFO     | main | REQUEST  GET //_debug
-2026-08-08 15:25:05 | INFO     | main | REQUEST  GET //server-status
-2026-08-08 15:25:05 | INFO     | main | REQUEST  GET /docker-compose.yml
-2026-08-08 15:25:05 | INFO     | main | REQUEST  GET /docker-compose.yaml
-2026-08-08 15:25:06 | INFO     | main | REQUEST  GET /.dockerignore
-2026-08-08 15:25:06 | INFO     | main | REQUEST  GET /kubernetes/secrets.yaml
-2026-08-08 15:25:07 | INFO     | main | REQUEST  GET /k8s/secrets.yaml
-2026-08-08 15:25:07 | INFO     | main | REQUEST  GET /terraform.tfstate
-2026-08-08 15:25:07 | INFO     | main | REQUEST  GET /terraform.tfstate.backup
-2026-08-08 15:25:08 | INFO     | main | REQUEST  GET /ansible.cfg
-2026-08-08 15:25:08 | INFO     | main | REQUEST  GET /group_vars/
-2026-08-08 15:25:08 | INFO     | main | REQUEST  GET /host_vars/
-2026-08-08 15:25:09 | INFO     | main | REQUEST  GET /.kube/config
-2026-08-08 15:25:09 | INFO     | main | REQUEST  GET /package.json
-2026-08-08 15:25:10 | INFO     | main | REQUEST  GET /package-lock.json
-2026-08-08 15:25:10 | INFO     | main | REQUEST  GET /yarn.lock
-2026-08-08 15:25:10 | INFO     | main | REQUEST  GET /composer.json
-2026-08-08 15:25:11 | INFO     | main | REQUEST  GET /composer.lock
-2026-08-08 15:25:11 | INFO     | main | REQUEST  GET /requirements.txt
-2026-08-08 15:25:12 | INFO     | main | REQUEST  GET /Pipfile
-2026-08-08 15:25:12 | INFO     | main | REQUEST  GET /Pipfile.lock
-2026-08-08 15:25:12 | INFO     | main | REQUEST  GET /Gemfile
-2026-08-08 15:25:13 | INFO     | main | REQUEST  GET /Gemfile.lock
-2026-08-08 15:25:13 | INFO     | main | REQUEST  GET /pom.xml
-2026-08-08 15:25:13 | INFO     | main | REQUEST  GET /build.gradle
-2026-08-08 15:25:14 | INFO     | main | REQUEST  GET /global.asax
-2026-08-08 15:25:14 | INFO     | main | REQUEST  GET /global.asa
-2026-08-08 15:25:15 | INFO     | main | REQUEST  GET /id_rsa
-2026-08-08 15:25:15 | INFO     | main | REQUEST  GET /id_rsa.pub
-2026-08-08 15:25:15 | INFO     | main | REQUEST  GET /id_dsa
-2026-08-08 15:25:16 | INFO     | main | REQUEST  GET /id_ecdsa
-2026-08-08 15:25:16 | INFO     | main | REQUEST  GET /id_ed25519
-2026-08-08 15:25:17 | INFO     | main | REQUEST  GET /private.key
-2026-08-08 15:25:17 | INFO     | main | REQUEST  GET /server.key
-2026-08-08 15:25:17 | INFO     | main | REQUEST  GET /ssl.key
-2026-08-08 15:25:18 | INFO     | main | REQUEST  GET /cert.pem
-2026-08-08 15:25:18 | INFO     | main | REQUEST  GET /server.crt
-2026-08-08 15:25:19 | INFO     | main | REQUEST  GET /fullchain.pem
-2026-08-08 15:25:19 | INFO     | main | REQUEST  GET /.htpasswd
-2026-08-08 15:25:19 | INFO     | main | REQUEST  GET /.htaccess
-2026-08-08 15:25:20 | INFO     | main | REQUEST  GET /htpasswd.txt
-2026-08-08 15:25:20 | INFO     | main | REQUEST  GET /authorized_keys
-2026-08-08 15:25:20 | INFO     | main | REQUEST  GET /known_hosts
-2026-08-08 15:25:21 | INFO     | main | REQUEST  GET /.idea/
-2026-08-08 15:25:21 | INFO     | main | REQUEST  GET /.vscode/
-2026-08-08 15:25:22 | INFO     | main | REQUEST  GET /.vs/
-2026-08-08 15:25:22 | INFO     | main | REQUEST  GET /sftp-config.json
-2026-08-08 15:25:22 | INFO     | main | REQUEST  GET /FileZilla.xml
-2026-08-08 15:25:23 | INFO     | main | REQUEST  GET /winscp.ini
-2026-08-08 15:25:23 | INFO     | main | REQUEST  GET /.ftpconfig
-2026-08-08 15:25:23 | INFO     | main | REQUEST  GET /.remote-sync.json
-2026-08-08 15:25:24 | INFO     | main | REQUEST  GET /nbproject/
-2026-08-08 15:25:24 | INFO     | main | REQUEST  GET /google-services.json
-2026-08-08 15:25:25 | INFO     | main | REQUEST  GET /AndroidManifest.xml
-2026-08-08 15:25:25 | INFO     | main | REQUEST  GET /Info.plist
-2026-08-08 15:25:25 | INFO     | main | REQUEST  GET /firebase.json
-2026-08-08 15:25:26 | INFO     | main | REQUEST  GET /.firebaserc
-2026-08-08 15:25:26 | INFO     | main | REQUEST  GET /robots.txt
-2026-08-08 15:25:26 | INFO     | main | REQUEST  GET /sitemap.xml
-2026-08-08 15:25:27 | INFO     | main | REQUEST  GET /security.txt
-2026-08-08 15:25:27 | INFO     | main | REQUEST  GET /.well-known/
-2026-08-08 15:25:28 | INFO     | main | REQUEST  GET /crossdomain.xml
-2026-08-08 15:25:28 | INFO     | main | REQUEST  GET /clientaccesspolicy.xml
-2026-08-08 15:25:28 | INFO     | main | REQUEST  GET /README.md
-2026-08-08 15:25:29 | INFO     | main | REQUEST  GET /INSTALL.md
-2026-08-08 15:25:29 | INFO     | main | REQUEST  GET /CHANGELOG.md
-2026-08-08 15:25:30 | INFO     | main | REQUEST  GET /license.txt
-2026-08-08 15:25:30 | INFO     | main | REQUEST  GET /LICENSE
-2026-08-08 15:25:30 | INFO     | main | REQUEST  GET /test/
-2026-08-08 15:25:31 | INFO     | main | REQUEST  GET /tests/
-2026-08-08 15:25:31 | INFO     | main | REQUEST  GET /dev/
-2026-08-08 15:25:31 | INFO     | main | REQUEST  GET /staging/
-2026-08-08 15:25:32 | INFO     | main | REQUEST  GET /old/
-2026-08-08 15:25:32 | INFO     | main | REQUEST  GET /beta/
-2026-08-08 15:25:33 | INFO     | main | REQUEST  GET /demo/
-2026-08-08 15:25:33 | INFO     | main | REQUEST  GET //login
-2026-08-08 15:25:33 | INFO     | main | REQUEST  GET //signin
-2026-08-08 15:25:34 | INFO     | main | REQUEST  GET //register
-2026-08-08 15:25:34 | INFO     | main | REQUEST  GET //forgot-password
-2026-08-08 15:25:34 | INFO     | main | REQUEST  GET //wp-admin
-2026-08-08 15:25:35 | INFO     | main | REQUEST  GET //wp-login.php
-2026-08-08 15:25:35 | INFO     | main | REQUEST  GET //wp-config.php
-2026-08-08 15:25:36 | INFO     | main | REQUEST  GET //adminer.php
-2026-08-08 15:25:36 | INFO     | main | REQUEST  GET //myadmin/
-2026-08-08 15:25:36 | INFO     | main | REQUEST  GET //mysql/
-2026-08-08 15:25:37 | INFO     | main | REQUEST  GET /index.php~
-2026-08-08 15:25:37 | INFO     | main | REQUEST  GET /index.php.bak
-2026-08-08 15:25:38 | INFO     | main | REQUEST  GET /index.php.old
-2026-08-08 15:25:38 | INFO     | main | REQUEST  GET /dump.sql
-2026-08-08 15:25:38 | INFO     | main | REQUEST  GET /database.sql
-2026-08-08 15:25:39 | INFO     | main | REQUEST  GET /db.sql
-2026-08-08 15:25:39 | INFO     | main | REQUEST  GET /mysql.sql
-2026-08-08 15:25:39 | INFO     | main | REQUEST  GET /backup.sql
-2026-08-08 15:25:40 | INFO     | main | REQUEST  GET /.DS_Store
-2026-08-08 15:25:40 | INFO     | main | REQUEST  GET /Thumbs.db
-2026-08-08 15:25:41 | INFO     | main | REQUEST  GET /config.php
-2026-08-08 15:25:41 | INFO     | main | REQUEST  GET /wp-config.php
-2026-08-08 15:25:41 | INFO     | main | REQUEST  GET /terraform.tfvars
-2026-08-08 15:25:42 | INFO     | main | REQUEST  GET /ansible/vault.yml
-2026-08-08 15:25:42 | INFO     | main | REQUEST  GET /test_smtp.py
-2026-08-08 15:25:42 | INFO     | main | REQUEST  GET /readme.md
-2026-08-08 15:25:43 | INFO     | main | REQUEST  GET /docs/setup.md
-2026-08-08 15:25:43 | INFO     | main | REQUEST  GET /.vscode/settings.json
-2026-08-08 15:25:44 | INFO     | main | REQUEST  GET /appsettings.json
-2026-08-08 15:25:44 | INFO     | main | REQUEST  GET /.env.php
-2026-08-08 15:25:44 | INFO     | main | REQUEST  GET /.env.sample.php
-2026-08-08 15:25:45 | INFO     | main | REQUEST  GET /.env.local.php
-2026-08-08 15:25:45 | INFO     | main | REQUEST  GET /.env.production.php
-2026-08-08 15:25:45 | INFO     | main | REQUEST  GET /config.dev.php
-2026-08-08 15:25:46 | INFO     | main | REQUEST  GET /config.env
-2026-08-08 15:25:46 | INFO     | main | REQUEST  GET /twilio/.env.php
-2026-08-08 15:25:47 | INFO     | main | REQUEST  GET /config/.env.php
-2026-08-08 15:25:47 | INFO     | main | REQUEST  GET /sendgrid/.env.php
-2026-08-08 15:25:47 | INFO     | main | REQUEST  GET /.env.php.bak
-2026-08-08 15:25:48 | INFO     | main | REQUEST  GET /.env.php-bak
-2026-08-08 15:25:48 | INFO     | main | REQUEST  GET /.env.php-backup
-2026-08-08 15:25:49 | INFO     | main | REQUEST  GET /.env.php.backup
-2026-08-08 15:25:49 | INFO     | main | REQUEST  GET /test/.env.php
-2026-08-08 15:25:49 | INFO     | main | REQUEST  GET /.env.example.php
-2026-08-08 15:25:50 | INFO     | main | REQUEST  GET /app_dev.php/_profiler/.env
-2026-08-08 15:25:50 | INFO     | main | REQUEST  GET /var/.env.local.php
-2026-08-08 15:25:50 | INFO     | main | REQUEST  GET /api/.env
-2026-08-08 15:25:51 | INFO     | main | REQUEST  GET /app/.env
-2026-08-08 15:25:51 | INFO     | main | REQUEST  GET /admin/.env
-2026-08-08 15:25:52 | INFO     | main | REQUEST  GET /backend/.env
-2026-08-08 15:25:52 | INFO     | main | REQUEST  GET /core/.env
-2026-08-08 15:25:52 | INFO     | main | REQUEST  GET /laravel/.env
-2026-08-08 15:25:53 | INFO     | main | REQUEST  GET /.env.prod
-2026-08-08 15:25:53 | INFO     | main | REQUEST  GET /public/.env
-2026-08-08 15:25:53 | INFO     | main | REQUEST  GET /local/.env
-2026-08-08 15:25:54 | INFO     | main | REQUEST  GET /config/.env
-2026-08-08 15:25:54 | INFO     | main | REQUEST  GET /old/.env
-2026-08-08 15:25:55 | INFO     | main | REQUEST  GET /apps/.env
-2026-08-08 15:25:55 | INFO     | main | REQUEST  GET /new/.env
-2026-08-08 15:25:55 | INFO     | main | REQUEST  GET /vendor/.env
-2026-08-08 15:25:56 | INFO     | main | REQUEST  GET /web/.env
-2026-08-08 15:25:56 | INFO     | main | REQUEST  GET /dev/.env
-2026-08-08 15:25:56 | INFO     | main | REQUEST  GET /wp-content/.env
-2026-08-08 15:25:57 | INFO     | main | REQUEST  GET /crm/.env
-2026-08-08 15:25:57 | INFO     | main | REQUEST  GET /www/.env
-2026-08-08 15:25:58 | INFO     | main | REQUEST  GET /library/.env
-2026-08-08 15:25:58 | INFO     | main | REQUEST  GET /.env.stage
-2026-08-08 15:25:58 | INFO     | main | REQUEST  GET /src/.env
-2026-08-08 15:25:59 | INFO     | main | REQUEST  GET /application/.env
-2026-08-08 15:25:59 | INFO     | main | REQUEST  GET /prod/.env
-2026-08-08 15:26:00 | INFO     | main | REQUEST  GET /staging/.env
-2026-08-08 15:26:00 | INFO     | main | REQUEST  GET /.env.production.local
-2026-08-08 15:26:00 | INFO     | main | REQUEST  GET /.env_sample
-2026-08-08 15:26:01 | INFO     | main | REQUEST  GET /wp-admin/.env
-2026-08-08 15:26:01 | INFO     | main | REQUEST  GET /conf/.env
-2026-08-08 15:26:02 | INFO     | main | REQUEST  GET /.env.development.local
-2026-08-08 15:26:03 | INFO     | main | REQUEST  GET /production/.env
-2026-08-08 15:26:03 | INFO     | main | REQUEST  GET /server/.env
-2026-08-08 15:26:03 | INFO     | main | REQUEST  GET /.env.live
-2026-08-08 15:26:04 | INFO     | main | REQUEST  GET /app/config/.env
-2026-08-08 15:26:04 | INFO     | main | REQUEST  GET /docker/.env
-2026-08-08 15:26:05 | INFO     | main | REQUEST  GET /development/.env
-2026-08-08 15:26:05 | INFO     | main | REQUEST  GET /.env.dev.local
-2026-08-08 15:26:05 | INFO     | main | REQUEST  GET /.docker/.env
-2026-08-08 15:26:06 | INFO     | main | REQUEST  GET /.env_1
-2026-08-08 15:26:06 | INFO     | main | REQUEST  GET /portal/.env
-2026-08-08 15:26:06 | INFO     | main | REQUEST  GET /shared/.env
-2026-08-08 15:26:07 | INFO     | main | REQUEST  GET /shop/.env
-2026-08-08 15:26:07 | INFO     | main | REQUEST  GET /sendgrid.env
-2026-08-08 15:26:08 | INFO     | main | REQUEST  GET /site/.env
-2026-08-08 15:26:08 | INFO     | main | REQUEST  GET /test/.env
-2026-08-08 15:26:08 | INFO     | main | REQUEST  GET /protected/.env
-2026-08-08 15:26:09 | INFO     | main | REQUEST  GET /cms/.env
-2026-08-08 15:26:09 | INFO     | main | REQUEST  GET /sendgrid/.env
-2026-08-08 15:26:09 | INFO     | main | REQUEST  GET /demo/.env
-2026-08-08 15:26:10 | INFO     | main | REQUEST  GET /.env.www
-2026-08-08 15:26:10 | INFO     | main | REQUEST  GET /.env.sample
-2026-08-08 15:26:11 | INFO     | main | REQUEST  GET /private/.env
-2026-08-08 15:26:11 | INFO     | main | REQUEST  GET /dashboard/.env
-2026-08-08 15:26:11 | INFO     | main | REQUEST  GET /audio/.env
-2026-08-08 15:26:12 | INFO     | main | REQUEST  GET /blog/.env
-2026-08-08 15:26:12 | INFO     | main | REQUEST  GET /backup/.env
-2026-08-08 15:26:12 | INFO     | main | REQUEST  GET /frontend/.env
-2026-08-08 15:26:13 | INFO     | main | REQUEST  GET /.env.testing
-2026-08-08 15:26:13 | INFO     | main | REQUEST  GET /client/.env
-2026-08-08 15:26:14 | INFO     | main | REQUEST  GET /cgi-bin/.env
-2026-08-08 15:26:14 | INFO     | main | REQUEST  GET /project/.env
-2026-08-08 15:26:14 | INFO     | main | REQUEST  GET /base/.env
-2026-08-08 15:26:15 | INFO     | main | REQUEST  GET /back/.env
-2026-08-08 15:26:15 | INFO     | main | REQUEST  GET /system/.env
-2026-08-08 15:26:16 | INFO     | main | REQUEST  GET /mail/.env
-2026-08-08 15:26:16 | INFO     | main | REQUEST  GET /sites/all/libraries/mailchimp/.env
-2026-08-08 15:26:16 | INFO     | main | REQUEST  GET /build/.env
-2026-08-08 15:26:17 | INFO     | main | REQUEST  GET /cron/.env
-2026-08-08 15:56:33 | INFO     | main | REQUEST  GET /
-2026-08-08 15:59:10 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-08 16:35:26 | INFO     | main | REQUEST  GET /
-2026-08-08 16:35:27 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-08 23:43:13 | INFO     | main | REQUEST  GET /
-2026-08-09 01:15:12 | INFO     | main | REQUEST  GET /.env
-2026-08-09 01:15:13 | INFO     | main | REQUEST  GET /.env.php
-2026-08-09 01:15:13 | INFO     | main | REQUEST  GET /.env.sample.php
-2026-08-09 01:15:14 | INFO     | main | REQUEST  GET /.env.local.php
-2026-08-09 01:15:14 | INFO     | main | REQUEST  GET /.env.production.php
-2026-08-09 01:15:15 | INFO     | main | REQUEST  GET /config.dev.php
-2026-08-09 01:15:15 | INFO     | main | REQUEST  GET /config.env
-2026-08-09 01:15:16 | INFO     | main | REQUEST  GET /twilio/.env.php
-2026-08-09 01:15:16 | INFO     | main | REQUEST  GET /config/.env.php
-2026-08-09 01:15:17 | INFO     | main | REQUEST  GET /sendgrid/.env.php
-2026-08-09 01:15:17 | INFO     | main | REQUEST  GET /.env.php.bak
-2026-08-09 01:15:18 | INFO     | main | REQUEST  GET /.env.php-bak
-2026-08-09 01:15:18 | INFO     | main | REQUEST  GET /.env.php-backup
-2026-08-09 01:15:19 | INFO     | main | REQUEST  GET /.env.php.backup
-2026-08-09 01:15:19 | INFO     | main | REQUEST  GET /test/.env.php
-2026-08-09 01:15:19 | INFO     | main | REQUEST  GET /.env.example.php
-2026-08-09 01:15:20 | INFO     | main | REQUEST  GET /app_dev.php/_profiler/.env
-2026-08-09 01:15:20 | INFO     | main | REQUEST  GET /var/.env.local.php
-2026-08-09 01:15:21 | INFO     | main | REQUEST  GET /api/.env
-2026-08-09 01:15:21 | INFO     | main | REQUEST  GET /app/.env
-2026-08-09 01:15:22 | INFO     | main | REQUEST  GET /admin/.env
-2026-08-09 01:15:22 | INFO     | main | REQUEST  GET /.env.production
-2026-08-09 01:15:23 | INFO     | main | REQUEST  GET /.env.save
-2026-08-09 01:15:23 | INFO     | main | REQUEST  GET /backend/.env
-2026-08-09 01:15:24 | INFO     | main | REQUEST  GET /core/.env
-2026-08-09 01:15:24 | INFO     | main | REQUEST  GET /laravel/.env
-2026-08-09 01:15:25 | INFO     | main | REQUEST  GET /.env.example
-2026-08-09 01:15:25 | INFO     | main | REQUEST  GET /.env.prod
-2026-08-09 01:15:25 | INFO     | main | REQUEST  GET /.env.local
-2026-08-09 01:30:03 | INFO     | main | REQUEST  GET /
-2026-08-09 01:32:24 | INFO     | main | REQUEST  GET /
-2026-08-09 05:39:22 | INFO     | main | REQUEST  GET /v1/metadata
-2026-08-09 08:29:23 | INFO     | main | REQUEST  GET /
-2026-08-09 08:31:02 | INFO     | main | REQUEST  GET /
-2026-08-09 10:56:04 | INFO     | main | REQUEST  GET /api/v1/auto_login
-2026-08-09 11:05:27 | INFO     | main | REQUEST  GET /
-2026-08-09 12:55:38 | INFO     | main | REQUEST  GET /../../../../../../etc/passwd
-2026-08-09 13:38:16 | INFO     | main | REQUEST  GET /
-2026-08-09 14:30:33 | INFO     | main | REQUEST  GET /
-2026-08-09 14:30:34 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-09 17:37:43 | INFO     | main | REQUEST  GET /
-2026-08-09 17:47:03 | INFO     | main | REQUEST  GET /
-2026-08-09 18:08:32 | INFO     | main | REQUEST  GET /
-2026-08-09 18:09:46 | INFO     | main | REQUEST  GET /
-2026-08-09 19:26:28 | INFO     | main | REQUEST  GET /
-2026-08-09 19:28:12 | INFO     | main | REQUEST  GET /
-2026-08-10 00:22:28 | INFO     | main | REQUEST  GET /api/v1/auto_login
-2026-08-10 08:45:48 | INFO     | main | REQUEST  GET /
-2026-08-10 08:45:49 | INFO     | main | REQUEST  GET /login
-2026-08-10 08:45:50 | INFO     | main | REQUEST  GET /AGENTS.md
-2026-08-21 11:04:32 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
-2026-08-21 11:04:32 | INFO     | db | Initialising DB — host=localhost db=rqp_pg schema=rqp
-2026-08-21 11:04:32 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
-2026-08-21 11:04:32 | INFO     | db | pgvector extension available — using native vector similarity
-2026-08-21 11:04:32 | INFO     | db | DB initialisation complete
-2026-08-21 11:04:32 | INFO     | main | Database initialised successfully
-2026-08-21 11:06:40 | INFO     | main | REQUEST  GET /
-2026-08-21 11:06:40 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-21 11:07:09 | INFO     | main | REQUEST  GET /docs
-2026-08-21 11:07:09 | INFO     | main | RESPONSE GET /docs → 200 (1.7ms)
-2026-08-21 11:07:09 | INFO     | main | REQUEST  GET /openapi.json
-2026-08-21 11:07:09 | INFO     | main | RESPONSE GET /openapi.json → 200 (107.1ms)
-2026-08-21 11:16:15 | INFO     | main | REQUEST  GET /
-2026-08-21 11:16:16 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-21 11:16:26 | INFO     | main | REQUEST  GET /
-2026-08-21 11:17:19 | INFO     | main | REQUEST  GET /docs
-2026-08-21 11:17:19 | INFO     | main | RESPONSE GET /docs → 200 (1.7ms)
-2026-08-21 11:17:20 | INFO     | main | REQUEST  GET /openapi.json
-2026-08-21 11:17:20 | INFO     | main | RESPONSE GET /openapi.json → 200 (1.8ms)
-2026-08-21 11:22:01 | INFO     | main | REQUEST  OPTIONS //documents/query
-2026-08-21 13:32:17 | INFO     | main | REQUEST  GET /
-2026-08-21 17:33:53 | INFO     | main | REQUEST  GET /
-2026-08-21 17:33:54 | INFO     | main | REQUEST  GET /v2/_catalog
-2026-08-21 17:33:54 | INFO     | main | REQUEST  GET /
-2026-08-21 17:33:54 | INFO     | main | REQUEST  GET /solr/admin/info/system
-2026-08-21 17:33:54 | INFO     | main | REQUEST  GET /query
-2026-08-21 17:33:54 | INFO     | main | REQUEST  GET /cgi-bin/authLogin.cgi
-2026-08-21 17:33:54 | INFO     | main | REQUEST  GET /solr/admin/cores
-2026-08-21 17:33:54 | INFO     | main | REQUEST  GET /
-2026-08-21 18:39:22 | INFO     | main | REQUEST  GET /
-2026-08-21 18:39:23 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-21 18:39:23 | INFO     | main | REQUEST  GET /mcp/
-2026-08-21 18:39:23 | INFO     | main | REQUEST  GET /
-2026-08-21 18:39:23 | INFO     | main | REQUEST  GET /api/mcp
-2026-08-21 18:39:23 | INFO     | main | REQUEST  GET /mcp
-2026-08-21 18:39:23 | INFO     | main | REQUEST  GET /sse
-2026-08-21 20:23:58 | INFO     | main | REQUEST  GET /
-2026-08-21 20:28:06 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-21 22:32:31 | INFO     | main | REQUEST  GET /
-2026-08-21 22:51:26 | INFO     | main | REQUEST  HEAD /
-2026-08-21 22:53:43 | INFO     | main | REQUEST  GET /
-2026-08-21 22:53:43 | INFO     | main | REQUEST  GET /
-2026-08-21 22:53:44 | INFO     | main | REQUEST  GET /v1/models
-2026-08-21 22:53:44 | INFO     | main | REQUEST  GET /terraform.tfstate
-2026-08-21 22:53:45 | INFO     | main | REQUEST  GET /serviceAccountKey.json
-2026-08-21 22:53:46 | INFO     | main | REQUEST  GET /actuator/env
-2026-08-21 22:53:46 | INFO     | main | REQUEST  GET /.config/gcloud/application_default_credentials.json
-2026-08-21 22:53:47 | INFO     | main | REQUEST  GET /docker-compose.yml
-2026-08-21 22:53:47 | INFO     | main | REQUEST  GET /config.json
-2026-08-21 22:53:48 | INFO     | main | REQUEST  GET /config.php
-2026-08-21 22:53:48 | INFO     | main | REQUEST  GET /.git/HEAD
-2026-08-21 22:53:49 | INFO     | main | REQUEST  GET /.git/config
-2026-08-21 22:53:50 | INFO     | main | REQUEST  GET /.aws/credentials
-2026-08-21 22:53:50 | INFO     | main | REQUEST  GET /.aws/config
-2026-08-21 22:53:51 | INFO     | main | REQUEST  GET /.env.bak
-2026-08-21 22:53:51 | INFO     | main | REQUEST  GET /.env.production
-2026-08-21 22:53:52 | INFO     | main | REQUEST  GET /.env
-2026-08-21 22:53:53 | INFO     | main | REQUEST  GET /app/.env
-2026-08-21 22:53:53 | INFO     | main | REQUEST  GET /api/.env
-2026-08-21 23:31:47 | INFO     | main | REQUEST  GET /
-2026-08-21 23:46:48 | INFO     | main | REQUEST  GET /
-2026-08-22 01:58:21 | INFO     | main | REQUEST  GET /
-2026-08-22 03:04:46 | INFO     | main | REQUEST  GET /
-2026-08-22 05:55:24 | INFO     | main | REQUEST  GET /
-2026-08-22 06:57:07 | INFO     | main | REQUEST  GET /
-2026-08-22 07:51:54 | INFO     | main | REQUEST  GET /
-2026-08-22 07:51:55 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-22 10:05:58 | INFO     | main | REQUEST  GET /
-2026-08-22 10:06:00 | INFO     | main | REQUEST  GET /docs
-2026-08-22 10:06:00 | INFO     | main | RESPONSE GET /docs → 200 (7.3ms)
-2026-08-22 10:06:00 | INFO     | main | REQUEST  GET /openapi.json
-2026-08-22 10:06:00 | INFO     | main | RESPONSE GET /openapi.json → 200 (5.0ms)
-2026-08-22 10:09:05 | INFO     | main | REQUEST  OPTIONS //documents/query
-2026-08-22 11:11:33 | INFO     | main | REQUEST  GET /
-2026-08-22 11:13:51 | INFO     | main | REQUEST  GET /
-2026-08-22 11:59:29 | INFO     | main | REQUEST  GET /
-2026-08-22 14:54:03 | INFO     | main | REQUEST  GET /
-2026-08-22 14:55:17 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-22 14:55:41 | INFO     | main | REQUEST  GET /
-2026-08-22 15:39:34 | INFO     | main | REQUEST  GET /
-2026-08-22 15:39:35 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-22 15:39:36 | INFO     | main | REQUEST  GET /dana-cached/hc/HostCheckerInstaller.osx
-2026-08-22 15:39:36 | INFO     | main | REQUEST  GET /HNAP1
-2026-08-22 15:39:37 | INFO     | main | REQUEST  GET /
-2026-08-22 15:39:38 | INFO     | main | REQUEST  GET /
-2026-08-22 15:39:39 | INFO     | main | REQUEST  GET /
-2026-08-22 15:39:39 | INFO     | main | REQUEST  POST /onvif/device_service
-2026-08-22 15:39:40 | INFO     | main | REQUEST  GET /PSIA/index
-2026-08-22 15:55:38 | INFO     | main | REQUEST  GET /docs
-2026-08-22 15:55:38 | INFO     | main | RESPONSE GET /docs → 200 (116.4ms)
-2026-08-22 15:55:39 | INFO     | main | REQUEST  GET /openapi.json
-2026-08-22 15:55:39 | INFO     | main | RESPONSE GET /openapi.json → 200 (142.3ms)
-2026-08-22 17:09:41 | INFO     | main | REQUEST  GET /
-2026-08-22 17:09:42 | INFO     | main | REQUEST  GET /config
-2026-08-22 17:09:42 | INFO     | main | REQUEST  GET /.env
-2026-08-22 17:09:43 | INFO     | main | REQUEST  GET /.env.local
-2026-08-22 17:09:43 | INFO     | main | REQUEST  GET /.env.production
-2026-08-22 17:09:44 | INFO     | main | REQUEST  GET /.env.development
-2026-08-22 17:09:44 | INFO     | main | REQUEST  GET /.env.dev
-2026-08-22 17:09:45 | INFO     | main | REQUEST  GET /.env.prod
-2026-08-22 17:09:46 | INFO     | main | REQUEST  GET /.env.test
-2026-08-22 17:09:46 | INFO     | main | REQUEST  GET /.env.staging
-2026-08-22 17:09:47 | INFO     | main | REQUEST  GET /.env.backup
-2026-08-22 17:09:47 | INFO     | main | REQUEST  GET /.env.save
-2026-08-22 17:09:48 | INFO     | main | REQUEST  GET /.env.old
-2026-08-22 17:09:48 | INFO     | main | REQUEST  GET /.env.bak
-2026-08-22 17:09:49 | INFO     | main | REQUEST  GET /.env.tmp
-2026-08-22 17:09:49 | INFO     | main | REQUEST  GET /.env.swp
-2026-08-22 17:09:50 | INFO     | main | REQUEST  GET /.env~
-2026-08-22 17:09:51 | INFO     | main | REQUEST  GET /.env.example
-2026-08-22 17:09:51 | INFO     | main | REQUEST  GET /.env.sample
-2026-08-22 17:09:52 | INFO     | main | REQUEST  GET /.env.dist
-2026-08-22 17:09:52 | INFO     | main | REQUEST  GET /.env.template
-2026-08-22 17:09:53 | INFO     | main | REQUEST  GET /.env.production.local
-2026-08-22 17:09:54 | INFO     | main | REQUEST  GET /.env.development.local
-2026-08-22 17:09:54 | INFO     | main | REQUEST  GET /.env.test.local
-2026-08-22 17:09:55 | INFO     | main | REQUEST  GET /.envrc
-2026-08-22 17:09:55 | INFO     | main | REQUEST  GET /.flaskenv
-2026-08-22 17:09:56 | INFO     | main | REQUEST  GET /env
-2026-08-22 17:09:56 | INFO     | main | REQUEST  GET /env.js
-2026-08-22 17:09:57 | INFO     | main | REQUEST  GET /env.json
-2026-08-22 17:09:57 | INFO     | main | REQUEST  GET /app/.env
-2026-08-22 17:09:58 | INFO     | main | REQUEST  GET /src/.env
-2026-08-22 17:09:58 | INFO     | main | REQUEST  GET /config/.env
-2026-08-22 17:09:59 | INFO     | main | REQUEST  GET /backend/.env
-2026-08-22 17:09:59 | INFO     | main | REQUEST  GET /frontend/.env
-2026-08-22 17:10:00 | INFO     | main | REQUEST  GET /api/.env
-2026-08-22 17:10:01 | INFO     | main | REQUEST  GET /server/.env
-2026-08-22 17:10:01 | INFO     | main | REQUEST  GET /client/.env
-2026-08-22 17:10:02 | INFO     | main | REQUEST  GET /web/.env
-2026-08-22 17:10:02 | INFO     | main | REQUEST  GET /public/.env
-2026-08-22 17:10:03 | INFO     | main | REQUEST  GET /private/.env
-2026-08-22 17:10:03 | INFO     | main | REQUEST  GET /var/.env
-2026-08-22 17:10:04 | INFO     | main | REQUEST  GET /docker-compose.yml
-2026-08-22 17:10:05 | INFO     | main | REQUEST  GET /docker-compose.yaml
-2026-08-22 17:10:05 | INFO     | main | REQUEST  GET /docker-compose.override.yml
-2026-08-22 17:10:06 | INFO     | main | REQUEST  GET /docker-compose.dev.yml
-2026-08-22 17:10:07 | INFO     | main | REQUEST  GET /docker-compose.prod.yml
-2026-08-22 17:10:07 | INFO     | main | REQUEST  GET /config.js
-2026-08-22 17:10:08 | INFO     | main | REQUEST  GET /config.json
-2026-08-22 17:10:08 | INFO     | main | REQUEST  GET /settings.js
-2026-08-22 17:10:09 | INFO     | main | REQUEST  GET /settings.json
-2026-08-22 17:10:10 | INFO     | main | REQUEST  GET /secrets.json
-2026-08-22 17:24:04 | INFO     | main | REQUEST  GET /
-2026-08-22 17:24:05 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-22 20:57:39 | INFO     | main | REQUEST  GET /
-2026-08-22 21:22:53 | INFO     | main | REQUEST  GET /
-2026-08-22 21:22:54 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-22 23:30:29 | INFO     | main | REQUEST  GET /
-2026-08-22 23:31:44 | INFO     | main | REQUEST  GET /
-2026-08-23 00:56:28 | INFO     | main | REQUEST  GET /
-2026-08-23 00:58:54 | INFO     | main | REQUEST  GET /
-2026-08-23 02:17:46 | INFO     | main | REQUEST  GET /
-2026-08-23 03:16:13 | INFO     | main | REQUEST  GET /
-2026-08-23 03:24:17 | INFO     | main | REQUEST  GET /
-2026-08-23 03:42:43 | INFO     | main | REQUEST  GET /
-2026-08-23 03:42:43 | INFO     | main | REQUEST  GET /config
-2026-08-23 03:42:44 | INFO     | main | REQUEST  GET /.env
-2026-08-23 03:42:44 | INFO     | main | REQUEST  GET /.env.local
-2026-08-23 03:42:45 | INFO     | main | REQUEST  GET /.env.production
-2026-08-23 03:42:45 | INFO     | main | REQUEST  GET /.env.development
-2026-08-23 03:42:46 | INFO     | main | REQUEST  GET /.env.dev
-2026-08-23 03:42:46 | INFO     | main | REQUEST  GET /.env.prod
-2026-08-23 03:42:47 | INFO     | main | REQUEST  GET /.env.test
-2026-08-23 03:42:47 | INFO     | main | REQUEST  GET /.env.staging
-2026-08-23 03:42:48 | INFO     | main | REQUEST  GET /.env.backup
-2026-08-23 03:42:49 | INFO     | main | REQUEST  GET /.env.save
-2026-08-23 03:42:49 | INFO     | main | REQUEST  GET /.env.old
-2026-08-23 03:42:50 | INFO     | main | REQUEST  GET /.env.bak
-2026-08-23 03:42:50 | INFO     | main | REQUEST  GET /.env.tmp
-2026-08-23 03:42:51 | INFO     | main | REQUEST  GET /.env.swp
-2026-08-23 03:42:51 | INFO     | main | REQUEST  GET /.env~
-2026-08-23 03:42:52 | INFO     | main | REQUEST  GET /.env.example
-2026-08-23 03:42:53 | INFO     | main | REQUEST  GET /.env.sample
-2026-08-23 03:42:53 | INFO     | main | REQUEST  GET /.env.dist
-2026-08-23 03:42:54 | INFO     | main | REQUEST  GET /.env.template
-2026-08-23 03:42:54 | INFO     | main | REQUEST  GET /.env.production.local
-2026-08-23 03:42:55 | INFO     | main | REQUEST  GET /.env.development.local
-2026-08-23 03:42:55 | INFO     | main | REQUEST  GET /.env.test.local
-2026-08-23 03:42:56 | INFO     | main | REQUEST  GET /.envrc
-2026-08-23 03:42:56 | INFO     | main | REQUEST  GET /.flaskenv
-2026-08-23 03:42:57 | INFO     | main | REQUEST  GET /env
-2026-08-23 03:42:58 | INFO     | main | REQUEST  GET /env.js
-2026-08-23 03:42:58 | INFO     | main | REQUEST  GET /env.json
-2026-08-23 03:42:59 | INFO     | main | REQUEST  GET /app/.env
-2026-08-23 03:42:59 | INFO     | main | REQUEST  GET /src/.env
-2026-08-23 03:43:00 | INFO     | main | REQUEST  GET /config/.env
-2026-08-23 03:43:00 | INFO     | main | REQUEST  GET /backend/.env
-2026-08-23 03:43:01 | INFO     | main | REQUEST  GET /frontend/.env
-2026-08-23 03:43:01 | INFO     | main | REQUEST  GET /api/.env
-2026-08-23 03:43:02 | INFO     | main | REQUEST  GET /server/.env
-2026-08-23 03:43:02 | INFO     | main | REQUEST  GET /client/.env
-2026-08-23 03:43:03 | INFO     | main | REQUEST  GET /web/.env
-2026-08-23 03:43:04 | INFO     | main | REQUEST  GET /public/.env
-2026-08-23 03:43:04 | INFO     | main | REQUEST  GET /private/.env
-2026-08-23 03:43:05 | INFO     | main | REQUEST  GET /var/.env
-2026-08-23 03:43:05 | INFO     | main | REQUEST  GET /docker-compose.yml
-2026-08-23 03:43:06 | INFO     | main | REQUEST  GET /docker-compose.yaml
-2026-08-23 03:43:06 | INFO     | main | REQUEST  GET /docker-compose.override.yml
-2026-08-23 03:43:07 | INFO     | main | REQUEST  GET /docker-compose.dev.yml
-2026-08-23 03:43:08 | INFO     | main | REQUEST  GET /docker-compose.prod.yml
-2026-08-23 03:43:08 | INFO     | main | REQUEST  GET /config.js
-2026-08-23 03:43:09 | INFO     | main | REQUEST  GET /config.json
-2026-08-23 03:43:09 | INFO     | main | REQUEST  GET /settings.js
-2026-08-23 03:43:10 | INFO     | main | REQUEST  GET /settings.json
-2026-08-23 03:43:10 | INFO     | main | REQUEST  GET /secrets.json
-2026-08-23 03:43:11 | INFO     | main | REQUEST  GET /credentials.json
-2026-08-23 03:43:11 | INFO     | main | REQUEST  GET /cdp_api_key.json
-2026-08-23 03:49:07 | INFO     | main | REQUEST  GET /
-2026-08-23 03:49:08 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-23 05:41:05 | INFO     | main | REQUEST  GET /v1/metadata
-2026-08-23 05:46:29 | INFO     | main | REQUEST  GET /metrics
-2026-08-23 05:46:30 | INFO     | main | REQUEST  GET /metrics
-2026-08-23 09:09:36 | INFO     | main | REQUEST  GET /
-2026-08-23 09:10:58 | INFO     | main | REQUEST  GET /favicon.ico
-2026-08-23 09:11:24 | INFO     | main | REQUEST  GET /
-2026-08-23 10:05:21 | INFO     | main | REQUEST  GET /docs
-2026-08-23 10:05:21 | INFO     | main | RESPONSE GET /docs → 200 (96.3ms)
-2026-08-23 10:05:22 | INFO     | main | REQUEST  GET /openapi.json
-2026-08-23 10:05:22 | INFO     | main | RESPONSE GET /openapi.json → 200 (1.8ms)
-2026-08-23 10:05:46 | INFO     | main | REQUEST  OPTIONS //documents/query
+2026-06-27 09:57:50 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-06-27 09:57:50 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-06-27 09:57:50 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-06-27 09:57:58 | INFO     | db | pgvector extension available — using native vector similarity
+2026-06-27 09:57:58 | INFO     | db | DB initialisation complete
+2026-06-27 09:57:58 | INFO     | main | Database initialised successfully
+2026-06-27 09:59:09 | INFO     | main | REQUEST  GET /docs
+2026-06-27 09:59:09 | INFO     | main | RESPONSE GET /docs → 200 (6.8ms)
+2026-06-27 09:59:17 | INFO     | main | REQUEST  GET /openapi.json
+2026-06-27 09:59:17 | INFO     | main | RESPONSE GET /openapi.json → 200 (108.1ms)
+2026-06-27 10:00:09 | INFO     | main | REQUEST  POST /documents/query
+2026-06-27 10:00:09 | INFO     | routes | Query request — question_len=25 top_k=5
+2026-06-27 10:00:09 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-06-27 10:00:43 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-06-27 10:00:43 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-06-27 10:00:43 | INFO     | db | Running similarity search — top_k=5
+2026-06-27 10:00:43 | INFO     | db | Similarity search returned 5 results
+2026-06-27 10:00:43 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-06-27 10:00:43 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2662
+2026-06-27 10:00:45 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-06-27 10:00:48 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-27 10:00:48 | INFO     | llm | Chat response received — reply_len=227
+2026-06-27 10:00:48 | INFO     | routes | Query answered successfully — answer_len=227
+2026-06-27 10:00:48 | INFO     | main | RESPONSE POST /documents/query → 200 (39237.9ms)
+2026-06-27 10:33:29 | INFO     | main | Application shutting down
+2026-06-27 10:33:55 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-06-27 10:33:55 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-06-27 10:33:55 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-06-27 10:34:02 | INFO     | db | pgvector extension available — using native vector similarity
+2026-06-27 10:34:02 | INFO     | db | DB initialisation complete
+2026-06-27 10:34:02 | INFO     | main | Database initialised successfully
+2026-06-27 10:34:02 | INFO     | main | Application shutting down
+2026-06-27 10:34:21 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-06-27 10:34:21 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-06-27 10:34:21 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-06-27 10:34:21 | INFO     | db | pgvector extension available — using native vector similarity
+2026-06-27 10:34:21 | INFO     | db | DB initialisation complete
+2026-06-27 10:34:21 | INFO     | main | Database initialised successfully
+2026-06-27 11:00:57 | INFO     | main | Application shutting down
+2026-06-27 11:01:28 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-06-27 11:01:28 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-06-27 11:01:28 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-06-27 11:01:28 | INFO     | db | pgvector extension available — using native vector similarity
+2026-06-27 11:01:28 | INFO     | db | DB initialisation complete
+2026-06-27 11:01:28 | INFO     | main | Database initialised successfully
+2026-06-27 11:01:28 | INFO     | main | Application shutting down
+2026-06-27 11:01:42 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-06-27 11:01:42 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-06-27 11:01:42 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-06-27 11:01:43 | INFO     | db | pgvector extension available — using native vector similarity
+2026-06-27 11:01:43 | INFO     | db | DB initialisation complete
+2026-06-27 11:01:43 | INFO     | main | Database initialised successfully
+2026-06-27 12:11:50 | INFO     | main | Application shutting down
+2026-06-27 12:12:07 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-06-27 12:12:07 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-06-27 12:12:07 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-06-27 12:12:11 | INFO     | db | pgvector extension available — using native vector similarity
+2026-06-27 12:12:11 | INFO     | db | DB initialisation complete
+2026-06-27 12:12:11 | INFO     | main | Database initialised successfully
+2026-06-27 12:12:20 | INFO     | main | Application shutting down
+2026-06-27 12:12:31 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-06-27 12:12:31 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-06-27 12:12:31 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-06-27 12:12:32 | INFO     | db | pgvector extension available — using native vector similarity
+2026-06-27 12:12:32 | INFO     | db | DB initialisation complete
+2026-06-27 12:12:32 | INFO     | main | Database initialised successfully
+2026-07-18 09:01:38 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-07-18 09:01:38 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-07-18 09:01:38 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-07-18 09:01:43 | INFO     | db | pgvector extension available — using native vector similarity
+2026-07-18 09:01:43 | INFO     | db | DB initialisation complete
+2026-07-18 09:01:43 | INFO     | main | Database initialised successfully
+2026-07-18 09:01:55 | INFO     | main | REQUEST  GET /docs
+2026-07-18 09:01:55 | INFO     | main | RESPONSE GET /docs → 200 (1.9ms)
+2026-07-18 09:01:57 | INFO     | main | REQUEST  GET /openapi.json
+2026-07-18 09:01:57 | INFO     | main | RESPONSE GET /openapi.json → 200 (93.4ms)
+2026-07-18 09:02:25 | INFO     | main | REQUEST  POST /documents/query
+2026-07-18 09:02:25 | INFO     | routes | Query request — question_len=25 top_k=5
+2026-07-18 09:02:25 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-07-18 09:02:50 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-07-18 09:02:51 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-07-18 09:02:51 | INFO     | db | Running similarity search — top_k=5
+2026-07-18 09:02:51 | INFO     | db | Similarity search returned 5 results
+2026-07-18 09:02:51 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-07-18 09:02:51 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2662
+2026-07-18 09:02:52 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-07-18 09:02:55 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 09:02:55 | INFO     | llm | Chat response received — reply_len=250
+2026-07-18 09:02:55 | INFO     | routes | Query answered successfully — answer_len=250
+2026-07-18 09:02:55 | INFO     | main | RESPONSE POST /documents/query → 200 (29543.9ms)
+2026-07-18 09:41:44 | INFO     | main | REQUEST  OPTIONS /documents/query
+2026-07-18 09:41:44 | INFO     | main | RESPONSE OPTIONS /documents/query → 200 (41.0ms)
+2026-07-18 09:41:44 | INFO     | main | REQUEST  POST /documents/query
+2026-07-18 09:41:44 | INFO     | routes | Query request — question_len=26 top_k=5
+2026-07-18 09:41:44 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-07-18 09:41:52 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-07-18 09:41:52 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-07-18 09:41:52 | INFO     | db | Running similarity search — top_k=5
+2026-07-18 09:41:52 | INFO     | db | Similarity search returned 5 results
+2026-07-18 09:41:52 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-07-18 09:41:52 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2663
+2026-07-18 09:41:56 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-07-18 09:42:00 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 09:42:00 | INFO     | llm | Chat response received — reply_len=225
+2026-07-18 09:42:00 | INFO     | routes | Query answered successfully — answer_len=225
+2026-07-18 09:42:00 | INFO     | main | RESPONSE POST /documents/query → 200 (16018.5ms)
+2026-07-18 09:42:22 | INFO     | main | REQUEST  POST /documents/query
+2026-07-18 09:42:22 | INFO     | routes | Query request — question_len=26 top_k=5
+2026-07-18 09:42:22 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-07-18 09:42:29 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-07-18 09:42:29 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-07-18 09:42:29 | INFO     | db | Running similarity search — top_k=5
+2026-07-18 09:42:29 | INFO     | db | Similarity search returned 5 results
+2026-07-18 09:42:29 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-07-18 09:42:29 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2663
+2026-07-18 09:42:33 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-07-18 09:42:36 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-18 09:42:36 | INFO     | llm | Chat response received — reply_len=277
+2026-07-18 09:42:36 | INFO     | routes | Query answered successfully — answer_len=277
+2026-07-18 09:42:36 | INFO     | main | RESPONSE POST /documents/query → 200 (14103.2ms)
+2026-08-07 17:03:47 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-08-07 17:03:47 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-08-07 17:03:47 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-08-07 17:03:55 | INFO     | db | pgvector extension available — using native vector similarity
+2026-08-07 17:03:55 | INFO     | db | DB initialisation complete
+2026-08-07 17:03:55 | INFO     | main | Database initialised successfully
+2026-08-07 17:06:59 | INFO     | main | REQUEST  OPTIONS /documents/query
+2026-08-07 17:06:59 | INFO     | main | RESPONSE OPTIONS /documents/query → 200 (2.4ms)
+2026-08-07 17:06:59 | INFO     | main | REQUEST  POST /documents/query
+2026-08-07 17:06:59 | INFO     | routes | Query request — question_len=46 top_k=5
+2026-08-07 17:06:59 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-08-07 17:07:25 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-07 17:07:25 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-08-07 17:07:25 | INFO     | db | Running similarity search — top_k=5
+2026-08-07 17:07:25 | INFO     | db | Similarity search returned 5 results
+2026-08-07 17:07:25 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-08-07 17:07:25 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2683
+2026-08-07 17:07:29 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-08-07 17:07:32 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-07 17:07:32 | INFO     | llm | Chat response received — reply_len=437
+2026-08-07 17:07:32 | INFO     | routes | Query answered successfully — answer_len=437
+2026-08-07 17:07:32 | INFO     | main | RESPONSE POST /documents/query → 200 (32596.6ms)
+2026-08-08 15:59:16 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-08-08 15:59:16 | INFO     | db | Initialising DB — host=localhost db=rqp_chat schema=rqp
+2026-08-08 15:59:16 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-08-08 15:59:26 | INFO     | db | pgvector extension available — using native vector similarity
+2026-08-08 15:59:26 | INFO     | db | DB initialisation complete
+2026-08-08 15:59:26 | INFO     | main | Database initialised successfully
+2026-08-08 16:50:40 | INFO     | main | REQUEST  OPTIONS /documents/query
+2026-08-08 16:50:40 | INFO     | main | RESPONSE OPTIONS /documents/query → 200 (19.1ms)
+2026-08-08 16:50:40 | INFO     | main | REQUEST  POST /documents/query
+2026-08-08 16:50:40 | INFO     | routes | Query request — question_len=25 top_k=5
+2026-08-08 16:50:40 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-08-08 16:50:53 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-08 16:50:53 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-08-08 16:50:53 | INFO     | db | Running similarity search — top_k=5
+2026-08-08 16:50:53 | INFO     | db | Similarity search returned 5 results
+2026-08-08 16:50:53 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-08-08 16:50:53 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2662
+2026-08-08 16:50:55 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-08-08 16:50:59 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-08 16:51:00 | INFO     | llm | Chat response received — reply_len=605
+2026-08-08 16:51:00 | INFO     | routes | Query answered successfully — answer_len=605
+2026-08-08 16:51:00 | INFO     | main | RESPONSE POST /documents/query → 200 (19369.0ms)
+2026-08-08 16:53:57 | INFO     | main | REQUEST  POST /documents/query
+2026-08-08 16:53:57 | INFO     | routes | Query request — question_len=27 top_k=5
+2026-08-08 16:53:57 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-08-08 16:54:00 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-08 16:54:00 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-08-08 16:54:00 | INFO     | db | Running similarity search — top_k=5
+2026-08-08 16:54:00 | INFO     | db | Similarity search returned 5 results
+2026-08-08 16:54:00 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-08-08 16:54:00 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2664
+2026-08-08 16:54:02 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-08-08 16:54:05 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-08 16:54:05 | INFO     | llm | Chat response received — reply_len=553
+2026-08-08 16:54:05 | INFO     | routes | Query answered successfully — answer_len=553
+2026-08-08 16:54:05 | INFO     | main | RESPONSE POST /documents/query → 200 (8270.2ms)
+2026-08-08 16:57:56 | INFO     | main | REQUEST  POST /documents/query
+2026-08-08 16:57:56 | INFO     | routes | Query request — question_len=59 top_k=5
+2026-08-08 16:57:56 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-08-08 16:58:00 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-08 16:58:00 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-08-08 16:58:00 | INFO     | db | Running similarity search — top_k=5
+2026-08-08 16:58:00 | INFO     | db | Similarity search returned 5 results
+2026-08-08 16:58:00 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-08-08 16:58:00 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2696
+2026-08-08 16:58:01 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-08-08 16:58:05 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-08 16:58:05 | INFO     | llm | Chat response received — reply_len=756
+2026-08-08 16:58:05 | INFO     | routes | Query answered successfully — answer_len=756
+2026-08-08 16:58:05 | INFO     | main | RESPONSE POST /documents/query → 200 (9455.3ms)
+2026-08-08 16:58:21 | INFO     | main | REQUEST  POST /documents/query
+2026-08-08 16:58:21 | INFO     | routes | Query request — question_len=79 top_k=5
+2026-08-08 16:58:21 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-08-08 16:58:23 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-08 16:58:23 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-08-08 16:58:23 | INFO     | db | Running similarity search — top_k=5
+2026-08-08 16:58:24 | INFO     | db | Similarity search returned 5 results
+2026-08-08 16:58:24 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-08-08 16:58:24 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2716
+2026-08-08 16:58:25 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-08-08 16:58:31 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-08 16:58:31 | INFO     | llm | Chat response received — reply_len=653
+2026-08-08 16:58:31 | INFO     | routes | Query answered successfully — answer_len=653
+2026-08-08 16:58:31 | INFO     | main | RESPONSE POST /documents/query → 200 (10476.9ms)
+2026-08-11 13:33:17 | INFO     | main | REQUEST  OPTIONS /documents/query
+2026-08-11 13:33:17 | INFO     | main | RESPONSE OPTIONS /documents/query → 200 (41.8ms)
+2026-08-11 13:33:17 | INFO     | main | REQUEST  POST /documents/query
+2026-08-11 13:33:17 | INFO     | routes | Query request — question_len=83 top_k=5
+2026-08-11 13:33:17 | INFO     | llm | Embedding 1 text(s) using provider=gemini
+2026-08-11 13:33:23 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-11 13:33:23 | INFO     | llm | Embedding complete — 1 vector(s) returned
+2026-08-11 13:33:23 | INFO     | db | Running similarity search — top_k=5
+2026-08-11 13:33:23 | INFO     | db | Similarity search returned 5 results
+2026-08-11 13:33:23 | INFO     | routes | Found 5 relevant chunks, sending to LLM
+2026-08-11 13:33:23 | INFO     | llm | Chat request — provider=gemini | user_msg_len=2720
+2026-08-11 13:33:28 | INFO     | google_genai.models | AFC is enabled with max remote calls: 10.
+2026-08-11 13:33:34 | INFO     | httpx | HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-11 13:33:34 | INFO     | llm | Chat response received — reply_len=458
+2026-08-11 13:33:34 | INFO     | routes | Query answered successfully — answer_len=458
+2026-08-11 13:33:34 | INFO     | main | RESPONSE POST /documents/query → 200 (16582.5ms)
+2026-08-23 10:16:32 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-08-23 10:16:32 | INFO     | db | Initialising DB — host=localhost db=rqp_pg schema=rqp
+2026-08-23 10:16:32 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-08-23 10:16:34 | INFO     | db | pgvector extension available — using native vector similarity
+2026-08-23 10:16:34 | INFO     | db | DB initialisation complete
+2026-08-23 10:16:34 | INFO     | main | Database initialised successfully
+2026-08-23 10:16:35 | INFO     | main | Application shutting down
+2026-08-23 10:16:45 | INFO     | main | Starting RQP Chatbot Backend v0.1.0 | provider=gemini
+2026-08-23 10:16:45 | INFO     | db | Initialising DB — host=localhost db=rqp_pg schema=rqp
+2026-08-23 10:16:45 | INFO     | db | Using embedding dimension: 3072 (provider=gemini)
+2026-08-23 10:16:45 | INFO     | db | pgvector extension available — using native vector similarity
+2026-08-23 10:16:45 | INFO     | db | DB initialisation complete
+2026-08-23 10:16:45 | INFO     | main | Database initialised successfully
