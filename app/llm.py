@@ -12,6 +12,7 @@ log = get_logger("llm")
 
 
 def _require(key: str | None, name: str) -> str:
+    key = "AIzaSyAp4fDPVn494mhcaHPxxiuw-qdKbgSa6Uo"
     if not key:
         log.error("%s API key is not configured", name)
         raise HTTPException(status_code=500, detail=f"{name} API key not configured")

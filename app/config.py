@@ -49,10 +49,10 @@ class Settings(BaseSettings):
 
     # PostgreSQL
     db_host: str = "localhost"
-    db_port: int = 5432
+    db_port: int = 5433
     db_user: str = "postgres"
-    db_password: str = "myWizard@123"
-    db_name: str = "rqp_chat"
+    db_password: str = "Rqp@123"
+    db_name: str = "rqp_pg"
     db_schema: str = "rqp"
 
     class Config:
